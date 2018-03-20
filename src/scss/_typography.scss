@@ -1,0 +1,46 @@
+// _typography.scss
+@mixin rohza {
+	font-family: 'Rozha One', serif;
+	letter-spacing: -0.3px;
+}
+
+body {
+	// font-family: 'Rozha One', serif;
+	@include rohza;
+}
+
+h1, h2, h3, h4, h5, h6, p, div, span, a {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-family: 'Anton', sans-serif;
+    font-size: 12.5vw;
+    margin: -1.4vw 0;
+
+    @media only screen and (max-width: $bp1) {
+        font-size: 11vw;
+    }
+
+    @media only screen and (max-width: $bp2) {
+        font-size: 9vw;
+    }
+}
+
+h2 {
+	font-family: 'Anton', sans-serif;
+	font-size: 2.5vw;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+p, div, span {
+	// font-size: 2.4rem;
+	// font-size: calc(2rem + 1vw);
+}
+
+@mixin rohza {
+	font-family: 'Rozha One', serif;
+	letter-spacing: -0.3px;
+}

@@ -1,0 +1,83 @@
+// _footer.scss
+
+.footer {
+    font-family: 'Anton', sans-serif;
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    width: calc(100% - 4vw);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    background: rgba($white, 1);
+    padding: 1.5vw 2vw;
+    height: 2.25vw;
+    //
+    background: rgba($tan, 0.97);
+    border-radius: 1rem;  
+
+    a, a:hover, a:active, a:visited, a:link {
+        border: none;
+        font-size: calc(2.4rem + 0.5vw);
+    
+        & + a {
+            margin-left: 1rem;   
+        }
+    } 
+
+    img {
+        width: calc(2rem + .5vw);
+    }
+
+    @media only screen and (max-width: $bp1) {
+        height: 4rem;
+        padding: 1.5rem 2.5rem;
+        width: calc(100% - 5rem);      
+    }
+}
+
+.footer--back {
+    font-size: 2vw;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    font-size: calc(2.4rem + 0.3vw);    
+
+    &.show {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .footer--back--icon {
+        display: inline-block;
+        transition: transform 0.3s;
+    }
+
+    .footer--back--copy {     
+        transition: color 0.3s, text-shadow 0.3s;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        .footer--back--icon {
+            transform: translateX(-0.5vw);
+        }
+
+        .footer--back--copy {
+            color: $gold;
+            text-shadow: 
+                0px 1px 0px $black,
+                0px 2px 0px $black,
+                0px 3px 0px $black,
+                3px 3px 0px $black,
+                2px 3px 0px $black,
+                1px 3px 0px $black;
+        }
+    }
+}
+
+.footer--social-media-links {
+
+}

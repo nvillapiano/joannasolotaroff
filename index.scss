@@ -1,0 +1,21 @@
+// global.scss
+
+// resets
+@import './src/scss/_normalize.scss';
+
+// styling
+@import './src/scss/_colors.scss';
+@import './src/scss/_typography.scss';
+
+
+// global styles
+@import './src/scss/_global.scss';
+
+// components
+@import './src/scss/_main-content.scss';
+@import './src/scss/_modal.scss';
+@import './src/scss/_project.scss';
+@import './src/scss/_footer.scss';
+
+// temporary-styles
+// @import './src/scss/_coming-soon.scss'

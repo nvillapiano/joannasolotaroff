@@ -1,0 +1,58 @@
+// _main-content.scss
+
+.main-content {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60vw;
+    width: 60vw;
+    background: $black;
+
+    @media only screen and (max-width: $bp1) {
+        width: 100vw;   
+        margin: 0 0 3rem;
+    }
+}
+
+.main-content--wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: $white;
+	height: calc(100% - 6vw);
+	width: calc(100% - 6vw);
+    position: relative;
+    //
+    background: $tan;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    @media only screen and (max-width: $bp1) {
+        min-height: 25rem;
+        width: 100%;
+        margin: 0 6vw;
+    }
+}
+
+.main-content--copy-wrapper {
+	color: $black;
+	padding: 2vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+
+    @media only screen and (max-width: $bp1) {
+        padding: 2rem 2.5rem;
+    }
+}
+
+.main-content--copy {
+    font-size: calc(2rem + 1.5vw);
+    display: none;
+
+    &.show {
+        display: block;
+    }
+}

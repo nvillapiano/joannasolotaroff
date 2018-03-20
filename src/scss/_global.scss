@@ -1,0 +1,84 @@
+// global styles
+body {
+	height: 100vh;
+	background: $black;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+
+	@media only screen and (max-width: $bp1) {
+    	height: auto;
+	}
+
+}
+
+body, html {
+	font-size: 62.5%; // 1rem = 10px
+	overflow: hidden;
+
+	@media only screen and (max-width: $bp1) {
+	    overflow-y: scroll; 
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+a, .link-trigger {
+	display: inline-block;
+	color: $black;
+	text-decoration: none;
+	transition: color 0.3s, border-bottom 0.3s;
+	border-bottom: 1px solid $gold;
+	//
+	line-height: 0.725;
+
+	&:hover {
+		cursor: pointer;
+		color: $gold;
+		border-bottom: 1px solid $black;
+	}
+}
+
+.page-title {
+	color: $gold;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 0.7vw 0.7vw 0 $black;
+	z-index: 10;
+	width: 100%;
+	margin: 0 0 1rem 0;
+	display: block;
+	background: $red;
+	text-indent: -0.3vw;
+}
+
+.content-wrapper {
+	width: 100vw;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	background: $black;
+	position: relative;
+
+	@media only screen and (max-width: $bp1) {
+	    flex-direction: column;
+	}
+}
+
+.bg {
+	padding: 2vw 2vw 0;
+
+	img {
+		display: block;
+		overflow: hidden;
+		border-radius: 50%;
+	}
+
+	@media only screen and (max-width: $bp1) {
+    	max-width: 40rem;
+    	margin: 0 auto -10vw;
+    	padding: 2vw 6vw;	    
+	}
+}
