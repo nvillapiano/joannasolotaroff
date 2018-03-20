@@ -1,0 +1,37 @@
+// _project.scss
+
+.projects {
+    margin: 1vw 0 4vw;    
+
+    @media only screen and (max-width: 768px) {
+        margin: 1rem 0 6rem;
+    }
+}
+
+.project {
+    margin: 0 0 2rem;
+    background: white;
+    padding: 2.5rem 2rem;    
+}
+
+.project--meta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 0 0.5vw 0;
+}
+
+.project--title {
+    display: inline-block;
+    font-size: calc(1.6rem + 1.2vw);
+    margin: -0.75rem 0 0 0;
+}
+
+.project--image {
+    max-width: 5rem;
+    margin: 0 1vw 0 0;
+}
+
+.project--copy {
+    font-size: calc(1.4rem + 0.75vw);
+}
