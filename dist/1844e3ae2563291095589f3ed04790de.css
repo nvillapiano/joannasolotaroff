@@ -1,3 +1,20 @@
+/*
+    _           __
+   (_)___  ____/ /__  _  __  ____________________
+  / / __ \/ __  / _ \| |/_/ / ___/ ___/ ___/ ___/
+ / / / / / /_/ /  __/>  <_ (__  ) /__(__  |__  )
+/_/_/ /_/\__,_/\___/_/|_(_)____/\___/____/____/
+
+*/
+/*
+                                           ___
+         ____  ____  _________ ___  ____ _/ (_)___  ___    ____________________
+        / __ \/ __ \/ ___/ __ `__ \/ __ `/ / /_  / / _ \  / ___/ ___/ ___/ ___/
+       / / / / /_/ / /  / / / / / / /_/ / / / / /_/  __/ (__  ) /__(__  |__  )
+ _____/_/ /_/\____/_/  /_/ /_/ /_/\__,_/_/_/ /___/\___(_)____/\___/____/____/
+/_____/
+
+*/
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -298,6 +315,24 @@ template {
 [hidden] {
   display: none; }
 
+/*
+                         _       __    __
+       _   ______ ______(_)___ _/ /_  / /__  _____  ____________________
+      | | / / __ `/ ___/ / __ `/ __ \/ / _ \/ ___/ / ___/ ___/ ___/ ___/
+      | |/ / /_/ / /  / / /_/ / /_/ / /  __(__  ) (__  ) /__(__  |__  )
+ _____|___/\__,_/_/  /_/\__,_/_.___/_/\___/____(_)____/\___/____/____/
+/_____/
+
+*/
+/*
+         __                                           __
+        / /___  ______  ____  ____ __________ _____  / /_  __  __  ____________________
+       / __/ / / / __ \/ __ \/ __ `/ ___/ __ `/ __ \/ __ \/ / / / / ___/ ___/ ___/ ___/
+      / /_/ /_/ / /_/ / /_/ / /_/ / /  / /_/ / /_/ / / / / /_/ / (__  ) /__(__  |__  )
+ _____\__/\__, / .___/\____/\__, /_/   \__,_/ .___/_/ /_/\__, (_)____/\___/____/____/
+/_____/  /____/_/          /____/          /_/          /____/
+
+*/
 body {
   font-family: 'Rozha One', serif;
   letter-spacing: -0.3px; }
@@ -323,6 +358,16 @@ h2 {
   text-transform: uppercase;
   text-align: center; }
 
+/*
+
+                __      __          __
+         ____ _/ /___  / /_  ____ _/ /  ____________________
+        / __ `/ / __ \/ __ \/ __ `/ /  / ___/ ___/ ___/ ___/
+       / /_/ / / /_/ / /_/ / /_/ / /_ (__  ) /__(__  |__  )
+ ______\__, /_/\____/_.___/\__,_/_/(_)____/\___/____/____/
+/_____/____/
+
+*/
 body {
   height: 100vh;
   background: #12100f;
@@ -347,25 +392,94 @@ a, .link-trigger {
   display: inline-block;
   color: #12100f;
   text-decoration: none;
-  transition: color 0.3s, border-bottom 0.3s;
+  transition: all 0.3s;
   border-bottom: 1px solid #ffc524;
-  line-height: 0.725; }
+  line-height: 0.725;
+  border: none;
+  color: #ffc524;
+  text-shadow: 0.1rem 0.1rem #12100f, 0.1rem 0.2rem #12100f, 0.2rem 0.1rem #12100f, 0.2rem 0.2rem #12100f;
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  font-size: 85%; }
   a:hover, .link-trigger:hover {
     cursor: pointer;
     color: #ffc524;
-    border-bottom: 1px solid #12100f; }
+    border-bottom: 1px solid #12100f;
+    border: none;
+    color: #12100f;
+    text-shadow: 0.1rem 0.1rem #ffc524, 0.1rem 0.2rem #ffc524, 0.2rem 0.1rem #ffc524, 0.2rem 0.2rem #ffc524; }
 
 .page-title {
   color: #ffc524;
   text-align: center;
   text-transform: uppercase;
-  text-shadow: 0.7vw 0.7vw 0 #12100f;
   z-index: 10;
   width: 100%;
   margin: 0 0 1rem 0;
   display: block;
   background: red;
-  text-indent: -0.3vw; }
+  text-indent: -0.3vw;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center; }
+  .page-title .letter {
+    margin: 0 0.5vw 0 0;
+    transition: text-shadow 0.3s;
+    text-shadow: 0.3rem 0.3rem #12100f; }
+    .page-title .letter.page-title__animate {
+      text-shadow: 0.7vw 0.7vw 0 #12100f; }
+
+span.letter:nth-child(0) {
+  transition-delay: 0s; }
+
+span.letter:nth-child(1) {
+  transition-delay: 0.075s; }
+
+span.letter:nth-child(2) {
+  transition-delay: 0.15s; }
+
+span.letter:nth-child(3) {
+  transition-delay: 0.225s; }
+
+span.letter:nth-child(4) {
+  transition-delay: 0.3s; }
+
+span.letter:nth-child(5) {
+  transition-delay: 0.375s; }
+
+span.letter:nth-child(6) {
+  transition-delay: 0.45s; }
+
+span.letter:nth-child(7) {
+  transition-delay: 0.525s; }
+
+span.letter:nth-child(8) {
+  transition-delay: 0.6s; }
+
+span.letter:nth-child(9) {
+  transition-delay: 0.675s; }
+
+span.letter:nth-child(10) {
+  transition-delay: 0.75s; }
+
+span.letter:nth-child(11) {
+  transition-delay: 0.825s; }
+
+span.letter:nth-child(12) {
+  transition-delay: 0.9s; }
+
+span.letter:nth-child(13) {
+  transition-delay: 0.975s; }
+
+span.letter:nth-child(14) {
+  transition-delay: 1.05s; }
+
+span.letter:nth-child(15) {
+  transition-delay: 1.125s; }
+
+span.letter:nth-child(16) {
+  transition-delay: 1.2s; }
 
 .content-wrapper {
   width: 100vw;
@@ -390,6 +504,16 @@ a, .link-trigger {
       margin: 0 auto -10vw;
       padding: 2vw 6vw; } }
 
+/*
+
+                          _                              __             __
+         ____ ___  ____ _(_)___        _________  ____  / /____  ____  / /_  ____________________
+        / __ `__ \/ __ `/ / __ \______/ ___/ __ \/ __ \/ __/ _ \/ __ \/ __/ / ___/ ___/ ___/ ___/
+       / / / / / / /_/ / / / / /_____/ /__/ /_/ / / / / /_/  __/ / / / /__ (__  ) /__(__  |__  )
+ _____/_/ /_/ /_/\__,_/_/_/ /_/      \___/\____/_/ /_/\__/\___/_/ /_/\__(_)____/\___/____/____/
+/_____/
+
+*/
 .main-content {
   display: flex;
   align-items: center;
@@ -412,7 +536,8 @@ a, .link-trigger {
   position: relative;
   background: #FFF2D1;
   border-radius: 1rem;
-  overflow: hidden; }
+  overflow: hidden;
+  box-shadow: 20px 20px red; }
   @media only screen and (max-width: 768px) {
     .main-content--wrapper {
       min-height: 25rem;
@@ -437,6 +562,15 @@ a, .link-trigger {
   .main-content--copy.show {
     display: block; }
 
+/*
+                              __      __
+         ____ ___  ____  ____/ /___ _/ /  ____________________
+        / __ `__ \/ __ \/ __  / __ `/ /  / ___/ ___/ ___/ ___/
+       / / / / / / /_/ / /_/ / /_/ / /_ (__  ) /__(__  |__  )
+ _____/_/ /_/ /_/\____/\__,_/\__,_/_/(_)____/\___/____/____/
+/_____/
+
+*/
 .modal {
   width: 50vw;
   height: auto;
@@ -473,6 +607,15 @@ a, .link-trigger {
     pointer-events: all;
     display: block; }
 
+/*
+                              _           __
+          ____  _________    (_)__  _____/ /_  ____________________
+         / __ \/ ___/ __ \  / / _ \/ ___/ __/ / ___/ ___/ ___/ ___/
+        / /_/ / /  / /_/ / / /  __/ /__/ /__ (__  ) /__(__  |__  )
+ ______/ .___/_/   \____/_/ /\___/\___/\__(_)____/\___/____/____/
+/_____/_/              /___/
+
+*/
 .projects {
   margin: 1vw 0 4vw; }
   @media only screen and (max-width: 768px) {
@@ -492,8 +635,7 @@ a, .link-trigger {
 
 .project--title {
   display: inline-block;
-  font-size: calc(1.6rem + 1.2vw);
-  margin: -0.75rem 0 0 0; }
+  font-size: calc(1.6rem + 1.2vw); }
 
 .project--image {
   max-width: 5rem;
@@ -502,6 +644,15 @@ a, .link-trigger {
 .project--copy {
   font-size: calc(1.4rem + 0.75vw); }
 
+/*
+          ____            __
+         / __/___  ____  / /____  _____  ____________________
+        / /_/ __ \/ __ \/ __/ _ \/ ___/ / ___/ ___/ ___/ ___/
+       / __/ /_/ / /_/ / /_/  __/ /  _ (__  ) /__(__  |__  )
+ _____/_/  \____/\____/\__/\___/_/  (_)____/\___/____/____/
+/_____/
+
+*/
 .footer {
   font-family: 'Anton', sans-serif;
   position: absolute;

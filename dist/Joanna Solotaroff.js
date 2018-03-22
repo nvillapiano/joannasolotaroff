@@ -72,6 +72,15 @@ require = (function (modules, cache, entry) {
   // Override the current require with this new one
   return newRequire;
 })({35:[function(require,module,exports) {
+/*
+    _           __              _
+   (_)___  ____/ /__  _  __    (_)____
+  / / __ \/ __  / _ \| |/_/   / / ___/
+ / / / / / /_/ /  __/>  <_   / (__  )
+/_/_/ /_/\__,_/\___/_/|_(_)_/ /____/
+                         /___/
+
+*/
 
 $('.link-trigger').click(function () {
     var slug = $(this).attr('data-id');
@@ -82,12 +91,17 @@ $('.link-trigger').click(function () {
     }, 10);
 });
 
+// 
 $('.footer--back').click(function () {
     $('.modal--module').removeClass('show');
     $('.main-content--copy').addClass('show');
     setTimeout(function () {
         $('.footer--back').removeClass('show');
     }, 10);
+});
+
+$(document).ready(function () {
+    $('.letter').addClass('page-title__animate');
 });
 
 //

@@ -1,11 +1,24 @@
-// _typography.scss
+/*
+         __                                           __
+        / /___  ______  ____  ____ __________ _____  / /_  __  __  ____________________
+       / __/ / / / __ \/ __ \/ __ `/ ___/ __ `/ __ \/ __ \/ / / / / ___/ ___/ ___/ ___/
+      / /_/ /_/ / /_/ / /_/ / /_/ / /  / /_/ / /_/ / / / / /_/ / (__  ) /__(__  |__  )
+ _____\__/\__, / .___/\____/\__, /_/   \__,_/ .___/_/ /_/\__, (_)____/\___/____/____/
+/_____/  /____/_/          /____/          /_/          /____/
+
+*/
+
+
 @mixin rohza {
 	font-family: 'Rozha One', serif;
 	letter-spacing: -0.3px;
 }
 
+@mixin anton {
+    font-family: 'Anton', sans-serif;   
+}
+
 body {
-	// font-family: 'Rozha One', serif;
 	@include rohza;
 }
 
@@ -15,7 +28,7 @@ h1, h2, h3, h4, h5, h6, p, div, span, a {
 }
 
 h1 {
-	font-family: 'Anton', sans-serif;
+	@include anton();
     font-size: 12.5vw;
     margin: -1.4vw 0;
 

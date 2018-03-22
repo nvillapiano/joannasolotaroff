@@ -1,3 +1,14 @@
+/*
+
+                __      __          __
+         ____ _/ /___  / /_  ____ _/ /  ____________________
+        / __ `/ / __ \/ __ \/ __ `/ /  / ___/ ___/ ___/ ___/
+       / /_/ / / /_/ / /_/ / /_/ / /_ (__  ) /__(__  |__  )
+ ______\__, /_/\____/_.___/\__,_/_/(_)____/\___/____/____/
+/_____/____/
+
+*/
+
 // global styles
 body {
 	height: 100vh;
@@ -29,30 +40,72 @@ a, .link-trigger {
 	display: inline-block;
 	color: $black;
 	text-decoration: none;
-	transition: color 0.3s, border-bottom 0.3s;
+	transition: all 0.3s;
 	border-bottom: 1px solid $gold;
-	//
 	line-height: 0.725;
+	//
+	border: none;
+	color: $gold;
+	text-shadow: 
+		0.1rem 0.1rem $black,
+		0.1rem 0.2rem $black,
+		0.2rem 0.1rem $black,
+		0.2rem 0.2rem $black;
+	//
+	@include anton();	
+	text-transform: uppercase;
+	font-size: 85%;
 
 	&:hover {
 		cursor: pointer;
 		color: $gold;
 		border-bottom: 1px solid $black;
+		//
+		border: none;
+		color: $black;
+		text-shadow: 
+			0.1rem 0.1rem $gold,
+			0.1rem 0.2rem $gold,
+			0.2rem 0.1rem $gold,
+			0.2rem 0.2rem $gold;
 	}
 }
 
 .page-title {
 	color: $gold;
 	text-align: center;
-	text-transform: uppercase;
-	text-shadow: 0.7vw 0.7vw 0 $black;
+	text-transform: uppercase;	
 	z-index: 10;
 	width: 100%;
 	margin: 0 0 1rem 0;
 	display: block;
 	background: $red;
 	text-indent: -0.3vw;
+	//
+	display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+	.letter {		
+		margin: 0 0.5vw 0 0;
+    	transition: text-shadow 0.3s;
+    	text-shadow: 0.3rem 0.3rem $black;
+
+    	&.page-title__animate {
+    		text-shadow: 0.7vw 0.7vw 0 $black;
+    	}
+	}
 }
+
+// page title letter animation
+$letters: 17;
+@for $i from 0 to $letters {
+	span.letter:nth-child(#{$i}) {
+		transition-delay: $i * 0.075s;
+	}
+}	
+
 
 .content-wrapper {
 	width: 100vw;
