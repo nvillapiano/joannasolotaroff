@@ -1,5 +1,5 @@
 node_modules/
-.cache/
-dist/
+*.cache/
+*dist/
 .git
 *.DS_Store

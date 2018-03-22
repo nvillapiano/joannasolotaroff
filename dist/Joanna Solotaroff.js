@@ -71,7 +71,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({35:[function(require,module,exports) {
+})({5:[function(require,module,exports) {
 /*
     _           __              _
    (_)___  ____/ /__  _  __    (_)____
@@ -116,7 +116,7 @@ $.fn.equalize = function () {
     this.height(maxHeight);
 };
 // $('.bg img').equalize('.main-content--wrapper');
-},{}],42:[function(require,module,exports) {
+},{}],14:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -138,7 +138,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '57166' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '52925' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -239,5 +239,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[42,35])
+},{}]},{},[14,5])
 //# sourceMappingURL=/dist/Joanna%20Solotaroff.map

@@ -376,7 +376,8 @@ body {
   flex-direction: column; }
   @media only screen and (max-width: 768px) {
     body {
-      height: auto; } }
+      height: auto;
+      min-height: 100vh; } }
 
 body, html {
   font-size: 62.5%;
@@ -425,8 +426,8 @@ a, .link-trigger {
   align-items: center; }
   .page-title .letter {
     margin: 0 0.5vw 0 0;
-    transition: text-shadow 0.3s;
-    text-shadow: 0.3rem 0.3rem #12100f; }
+    text-shadow: 0.3rem 0.3rem #12100f;
+    transition: text-shadow 0.3s; }
     .page-title .letter.page-title__animate {
       text-shadow: 0.7vw 0.7vw 0 #12100f; }
 
@@ -537,7 +538,7 @@ span.letter:nth-child(16) {
   background: #FFF2D1;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 20px 20px red; }
+  box-shadow: 2px 2px #262321, 4px 4px #262321, 6px 6px #262321, 8px 8px #262321, 10px 10px #262321, 12px 12px #262321, 14px 14px #262321, 16px 16px #262321, 18px 18px #262321, 20px 20px #262321, 22px 22px #262321, 24px 24px #262321, 26px 26px #262321, 28px 28px #262321, 30px 30px #262321, 32px 32px #262321, 34px 34px #262321, 36px 36px #262321, 38px 38px #262321, 40px 40px #262321, 42px 42px #262321, 44px 44px #262321, 46px 46px #262321, 48px 48px #262321, 50px 50px #262321, 52px 52px #262321, 54px 54px #262321, 56px 56px #262321, 58px 58px #262321, 60px 60px #262321, 62px 62px #262321, 64px 64px #262321, 66px 66px #262321, 68px 68px #262321, 70px 70px #262321, 72px 72px #262321, 74px 74px #262321, 76px 76px #262321, 78px 78px #262321, 80px 80px #262321, 82px 82px #262321, 84px 84px #262321, 86px 86px #262321, 88px 88px #262321, 90px 90px #262321, 92px 92px #262321, 94px 94px #262321, 96px 96px #262321, 98px 98px #262321, 100px 100px #262321, 0 0 50px, 0 0 50px; }
   @media only screen and (max-width: 768px) {
     .main-content--wrapper {
       min-height: 25rem;

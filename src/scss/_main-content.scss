@@ -43,7 +43,7 @@
         margin: 0 6vw;
     }
 
-    @include longShadow(20, red);
+    @include longShadow(50, $grey);
 }
 
 .main-content--copy-wrapper {
