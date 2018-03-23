@@ -101,7 +101,9 @@ $('.footer--back').click(function () {
 });
 
 $(document).ready(function () {
-    $('.letter').addClass('page-title__animate');
+    setTimeout(function () {
+        $('.letter').addClass('page-title__animate');
+    }, 300);
 });
 
 //
@@ -116,7 +118,7 @@ $.fn.equalize = function () {
     this.height(maxHeight);
 };
 // $('.bg img').equalize('.main-content--wrapper');
-},{}],14:[function(require,module,exports) {
+},{}],31:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -138,7 +140,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '52925' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '49821' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -239,5 +241,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[14,5])
+},{}]},{},[31,5])
 //# sourceMappingURL=/dist/Joanna%20Solotaroff.map

@@ -27,7 +27,9 @@ $('.footer--back').click( function() {
 })
 
 $(document).ready( function() {
-    $('.letter').addClass('page-title__animate');
+    setTimeout( function () {
+        $('.letter').addClass('page-title__animate');
+    }, 300)    
 })
 
 //

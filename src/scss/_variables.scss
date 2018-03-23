@@ -13,6 +13,7 @@ $white: #fff;
 $black: #12100f;
 $gold: #ffc524;
 $grey: #262321;
+$light-grey: #A8A7A6;
 $red: red;
 $tan: #FFF2D1;
 
@@ -20,10 +21,20 @@ $tan: #FFF2D1;
 $bp1: 768px;
 $bp2: 440px;
 
-@mixin longShadow($shadowLength, $color) {
+@mixin longShadow($shadowLength,$color) {
     $ls: ();
     @for $i from 1 through $shadowLength {
-        $ls: $ls, $i*2px $i*2px $color;
+        $ls: $ls, $i*1px $i*1px $color;
     }    
     box-shadow: $ls, 0 0 #{$shadowLength}px, 0 0 #{$shadowLength}px;   
+}
+
+@mixin textShadow($shadowLength,$color) {
+    $ls: ();
+    @for $i from 1 through $shadowLength {
+        $ls: $ls, $i*1px $i*1px $color;
+    }    
+    text-shadow: $ls,    
+    0 0 #{$shadowLength}px, 
+    0 0 #{$shadowLength}px;   
 }
