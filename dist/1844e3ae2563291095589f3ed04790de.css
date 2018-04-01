@@ -486,20 +486,19 @@ span.letter:nth-child(16) {
   background: #12100f;
   position: relative;
   flex-shrink: 20;
-  margin-top: 1vw; }
+  margin-top: 1vw;
+  max-height: 60vh; }
   @media only screen and (max-width: 768px) {
     .content-wrapper {
       flex-direction: column; } }
+  .content-wrapper.active .main-content {
+    min-width: 80vw;
+    width: 80vw; }
 
 .bg {
-  background: url(../img/art-school.jpg);
-  background-size: cover;
-  border-radius: 50%;
-  overflow: hidden;
-  height: 0;
   margin: 0 3vw;
-  padding: 0 0 31vw;
-  position: relative; }
+  position: relative;
+  width: 100%; }
   .bg:after {
     content: '';
     position: absolute;
@@ -511,9 +510,13 @@ span.letter:nth-child(16) {
     z-index: -1; }
   @media only screen and (max-width: 768px) {
     .bg {
+      width: calc(100% - 12vw);
       max-width: 40rem;
       margin: 0 auto -10vw;
       padding: 2vw 6vw; } }
+  .bg img {
+    border-radius: 50%;
+    overflow: hidden; }
 
 /*
 
@@ -531,13 +534,35 @@ span.letter:nth-child(16) {
   justify-content: center;
   min-width: 60vw;
   width: 60vw;
+  margin-right: 3vw;
   background: #12100f;
   z-index: 1;
-  margin-right: 3vw; }
+  position: relative;
+  transition: all 0.3s; }
   @media only screen and (max-width: 768px) {
     .main-content {
       width: 100vw;
       margin: 0 0 3rem; } }
+  .main-content:before {
+    content: '';
+    position: absolute;
+    top: 0rem;
+    left: calc(100% - 0.5rem);
+    width: 0;
+    height: 0;
+    border-left: 0 solid transparent;
+    border-right: 250rem solid transparent;
+    border-bottom: 410rem solid #262321; }
+  .main-content:after {
+    content: '';
+    position: absolute;
+    bottom: calc(-100vw + 1rem);
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-top: 100vw solid #262321; }
 
 .main-content--wrapper {
   display: flex;
@@ -571,9 +596,13 @@ span.letter:nth-child(16) {
 
 .main-content--copy {
   font-size: calc(2rem + 1.5vw);
-  display: none; }
+  visibility: hidden;
+  width: 0;
+  overflow: hidden; }
   .main-content--copy.show {
-    display: block; }
+    visibility: visible;
+    width: 100%;
+    overflow: auto; }
 
 /*
                               __      __
@@ -679,7 +708,7 @@ span.letter:nth-child(16) {
   background: white;
   padding: 1.5vw 2vw;
   height: 2.25vw;
-  background: rgba(255, 242, 209, 0.97);
+  background: #FFF2D1;
   border-radius: 1rem; }
   .footer a, .footer a:hover, .footer a:active, .footer a:visited, .footer a:link {
     border: none;

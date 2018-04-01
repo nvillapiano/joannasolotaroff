@@ -16,15 +16,44 @@
     justify-content: center;
     min-width: 60vw;
     width: 60vw;
-    background: $black;
-    //
-    z-index: 1;
-    margin-right: 3vw;    
+    margin-right: 3vw; 
+    background: $black;    
+    z-index: 1;  
+    // pseudo long shadow
+    position: relative; 
 
     @media only screen and (max-width: $bp1) {
         width: 100vw;   
         margin: 0 0 3rem;
     }
+
+    // width transition
+    transition: all 0.3s;
+
+    // pseudo long shadow
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0rem;
+        left: calc(100% - 0.5rem);
+        width: 0;
+        height: 0;
+        border-left: 0 solid transparent;
+        border-right: 250rem solid transparent;
+        border-bottom: 410rem solid $grey;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: calc(-100vw + 1rem);
+        left: 0;
+        width: 0;
+        height: 0;
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+        border-top: 100vw solid $grey;
+    }    
 }
 
 .main-content--wrapper {
@@ -66,9 +95,15 @@
 
 .main-content--copy {
     font-size: calc(2rem + 1.5vw);
-    display: none;
+    // display: none;
+    visibility: hidden;
+    width: 0;
+    overflow: hidden;
 
     &.show {
-        display: block;
+        // display: block;
+        visibility: visible;
+        width: 100%;
+        overflow: auto;
     }
 }

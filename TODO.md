@@ -8,5 +8,5 @@
 -->
 
 + give the content area a max-height
-+ rollback main image bg technique and adjust responsiveness
+<!-- + rollback main image bg technique and adjust responsiveness -->
 + explore text-on-bottom layout paradigm

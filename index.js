@@ -9,6 +9,7 @@
 */
 
 $('.link-trigger').click( function() {
+    $('.content-wrapper').addClass('active');
     var slug = $(this).attr('data-id');
     $('.main-content--copy, .modal--module').removeClass('show');
     setTimeout( function() {
@@ -19,6 +20,7 @@ $('.link-trigger').click( function() {
 
 // 
 $('.footer--back').click( function() {
+    $('.content-wrapper').removeClass('active');
 	$('.modal--module').removeClass('show');
     $('.main-content--copy').addClass('show');
     setTimeout( function() {
