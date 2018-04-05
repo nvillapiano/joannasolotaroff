@@ -395,10 +395,10 @@ a, .link-trigger {
   transition: all 0.3s;
   line-height: 0.725;
   color: #ffc524;
-  text-shadow: 1px 1px #12100f, 2px 2px #12100f, 0 0 2px, 0 0 2px;
   font-family: 'Anton', sans-serif;
   text-transform: uppercase;
-  font-size: 85%; }
+  font-size: 85%;
+  text-shadow: 1px 1px #12100f, 2px 2px #12100f, 0 0 2px, 0 0 2px; }
   a:hover, .link-trigger:hover {
     color: #ffc524;
     cursor: pointer;
@@ -426,6 +426,12 @@ a, .link-trigger {
     transition: text-shadow 0.3s; }
     .page-title .letter.page-title__animate {
       text-shadow: 0.7vw 0.7vw 0 #12100f; }
+  @media only screen and (max-width: 768px) {
+    .page-title {
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 1.25vw 0; } }
 
 span.letter:nth-child(0) {
   transition-delay: 0s; }
@@ -488,17 +494,28 @@ span.letter:nth-child(16) {
   flex-shrink: 20;
   margin-top: 1vw;
   max-height: 60vh; }
-  @media only screen and (max-width: 768px) {
-    .content-wrapper {
-      flex-direction: column; } }
   .content-wrapper.active .main-content {
     min-width: 80vw;
     width: 80vw; }
+  @media only screen and (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+      max-height: initial;
+      margin: 0; }
+      .content-wrapper.active .main-content {
+        min-width: 100vw;
+        width: 100vw; }
+      .content-wrapper.active .bg {
+        max-width: 20rem; } }
 
 .bg {
   margin: 0 3vw;
   position: relative;
-  width: 100%; }
+  width: 100%;
+  transition: all 0.3s; }
+  .bg img {
+    border-radius: 50%;
+    overflow: hidden; }
   .bg:after {
     content: '';
     position: absolute;
@@ -512,11 +529,11 @@ span.letter:nth-child(16) {
     .bg {
       width: calc(100% - 12vw);
       max-width: 40rem;
-      margin: 0 auto -10vw;
+      margin: 15vw auto -10vw;
       padding: 2vw 6vw; } }
-  .bg img {
-    border-radius: 50%;
-    overflow: hidden; }
+  @media only screen and (max-width: 440px) {
+    .bg {
+      margin-top: 10vw; } }
 
 /*
 
@@ -542,7 +559,9 @@ span.letter:nth-child(16) {
   @media only screen and (max-width: 768px) {
     .main-content {
       width: 100vw;
-      margin: 0 0 3rem; } }
+      margin: 0 0 3rem; }
+      .main-content:before, .main-content:after {
+        display: none; } }
   .main-content:before {
     content: '';
     position: absolute;

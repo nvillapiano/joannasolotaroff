@@ -19,16 +19,18 @@
     margin-right: 3vw; 
     background: $black;    
     z-index: 1;  
-    // pseudo long shadow
     position: relative; 
+    transition: all 0.3s;
 
     @media only screen and (max-width: $bp1) {
         width: 100vw;   
         margin: 0 0 3rem;
-    }
 
-    // width transition
-    transition: all 0.3s;
+        &:before, 
+        &:after {
+            display: none;
+        }
+    }
 
     // pseudo long shadow
     &:before {
