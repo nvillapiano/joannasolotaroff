@@ -22,16 +22,6 @@
     position: relative; 
     transition: all 0.3s;
 
-    @media only screen and (max-width: $bp1) {
-        width: 100vw;   
-        margin: 0 0 3rem;
-
-        &:before, 
-        &:after {
-            display: none;
-        }
-    }
-
     // pseudo long shadow
     &:before {
         content: '';
@@ -55,7 +45,17 @@
         border-left: 50vw solid transparent;
         border-right: 50vw solid transparent;
         border-top: 100vw solid $grey;
-    }    
+    }  
+
+    @media only screen and (max-width: $bp1) {
+        width: 100vw;   
+        margin: 0 0 3rem;
+
+        &:before, 
+        &:after {
+            display: none;
+        }        
+    }      
 }
 
 .main-content--wrapper {
