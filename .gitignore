@@ -1,10 +1,7 @@
-node_modules/
+.gitignore
 node_modules
-.cache/
 .cache
-dist/
 dist
-.git/
 .git
 .DS_Store
 
