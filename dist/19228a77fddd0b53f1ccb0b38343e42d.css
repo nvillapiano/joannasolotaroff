@@ -1,9 +1,0 @@
-body {
-  background: var(--bg, paleturquoise);
-  height: 100vh; }
-
-h1 {
-  font-family: 'Anton', sans-serif;
-  text-transform: uppercase;
-  color: #fff; }
-/* styles.css */
