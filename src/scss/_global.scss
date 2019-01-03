@@ -29,7 +29,7 @@ body, html {
 	overflow: hidden;
 
 	@media only screen and (max-width: $bp1) {
-	    overflow-y: scroll; 
+	    overflow-y: scroll;
 	}
 }
 
@@ -37,22 +37,23 @@ img {
 	max-width: 100%;
 }
 
-a, .link-trigger {
+a.link-trigger, .link-trigger {
 	display: inline-block;
 	text-decoration: none;
 	transition: all 0.3s;
 	line-height: 0.725;
 	color: $gold;
-	@include anton();	
+	@include anton();
 	text-transform: uppercase;
 	font-size: 85%;
-    @include textShadow(2, $black);    
+	@include textShadow(2, $black);
+	margin: 0 0.5rem;
 
 	&:hover {
 		color: $gold;
 		$shadowColor: $grey;
 		cursor: pointer;
-		text-shadow: 
+		text-shadow:
 			0.1rem 0.1rem $shadowColor,
 			0.1rem 0.2rem $shadowColor,
 			0.2rem 0.1rem $shadowColor,
@@ -76,7 +77,7 @@ a, .link-trigger {
 .page-title {
 	color: $gold;
 	text-align: center;
-	text-transform: uppercase;	
+	text-transform: uppercase;
 	z-index: 10;
 	width: 100%;
 	margin: 0 0 1rem 0;
@@ -88,12 +89,12 @@ a, .link-trigger {
     justify-content: center;
     align-items: center;
 
-	.letter {		
-		margin: 0 0.5vw 0 0;    	
+	.letter {
+		margin: 0 0.5vw 0 0;
     	text-shadow: 0.3rem 0.3rem $black;
     	transition: text-shadow 0.3s;
 
-    	&.page-title__animate {    		
+    	&.page-title__animate {
     		text-shadow: 0.7vw 0.7vw 0 $black;
     	}
 	}
@@ -102,7 +103,7 @@ a, .link-trigger {
         position: fixed;
         top: 0;
         left: 0;
-        padding: 1.25vw 0;        
+        padding: 1.25vw 0;
     }
 }
 
@@ -112,7 +113,7 @@ $letters: 17;
 	span.letter:nth-child(#{$i}) {
 		transition-delay: $i * 0.075s;
 	}
-}	
+}
 
 
 .content-wrapper {
@@ -130,9 +131,9 @@ $letters: 17;
 
         .main-content {
             min-width: 80vw;
-            width: 80vw;          
+            width: 80vw;
         }
-    }    
+    }
 
 	@media only screen and (max-width: $bp1) {
 	    flex-direction: column;
@@ -143,7 +144,7 @@ $letters: 17;
 
             .main-content {
                 min-width: 100vw;
-                width: 100vw;                   
+                width: 100vw;
             }
 
             .bg {
@@ -161,7 +162,7 @@ $letters: 17;
 
     img {
         border-radius: 50%;
-        overflow: hidden;        
+        overflow: hidden;
     }
 
     &:after {
@@ -179,10 +180,23 @@ $letters: 17;
         width: calc(100% - 12vw);
     	max-width: 40rem;
     	margin: 15vw auto -10vw;
-    	padding: 2vw 6vw;	    
-	}	
+    	padding: 2vw 6vw;
+	}
 
     @media only screen and (max-width: $bp2) {
         margin-top: 10vw;
     }
+}
+
+.icon {
+	height: initial;
+
+	&.link-out {
+		width: 2vw;
+
+		path {
+			stroke: $black;
+			stroke-width: 0.1rem;
+		}
+	}
 }

@@ -1,5 +1,5 @@
-node_modules/
 node_modules
+*.**/node_modules/
 .cache/
 .cache
 dist/
@@ -7,4 +7,5 @@ dist
 .git/
 .git
 .DS_Store
+.vs_code/
 

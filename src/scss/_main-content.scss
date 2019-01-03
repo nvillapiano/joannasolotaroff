@@ -16,11 +16,13 @@
     justify-content: center;
     min-width: 60vw;
     width: 60vw;
-    margin-right: 3vw; 
-    background: $black;    
-    z-index: 1;  
-    position: relative; 
+    margin-right: 3vw;
+    background: $black;
+    z-index: 1;
+    position: relative;
     transition: all 0.3s;
+    //
+    @include surana();
 
     // pseudo long shadow
     &:before {
@@ -45,17 +47,17 @@
         border-left: 50vw solid transparent;
         border-right: 50vw solid transparent;
         border-top: 100vw solid $grey;
-    }  
+    }
 
     @media only screen and (max-width: $bp1) {
-        width: 100vw;   
+        width: 100vw;
         margin: 0 0 3rem;
 
-        &:before, 
+        &:before,
         &:after {
             display: none;
-        }        
-    }      
+        }
+    }
 }
 
 .main-content--wrapper {
@@ -97,6 +99,7 @@
 
 .main-content--copy {
     font-size: calc(2rem + 1.5vw);
+    font-size: calc(1.5rem + 1.25vw);
     // display: none;
     visibility: hidden;
     width: 0;
@@ -107,5 +110,45 @@
         visibility: visible;
         width: 100%;
         overflow: auto;
+    }
+}
+
+.wave {
+    display: inline-block;
+    animation: wave 1s linear infinite;
+    margin: 0 1rem 0 0;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(25deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.peace {
+    display: inline-block;
+    animation: peace 1s linear infinite;
+    margin: 0 1rem 0 0;
+}
+
+@keyframes peace {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }

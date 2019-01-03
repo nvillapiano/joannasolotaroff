@@ -15,7 +15,7 @@
 }
 
 @mixin anton {
-    font-family: 'Anton', sans-serif;   
+    font-family: 'Anton', sans-serif;
 }
 
 body {
@@ -53,7 +53,40 @@ p, div, span {
 	// font-size: calc(2rem + 1vw);
 }
 
+p {
+	margin: 0 0 1rem;
+}
+
+a:not(.link-trigger) {
+	color: $black;
+	font-weight: 800;
+	text-decoration: none;
+	position: relative;
+	// display: inline-block;
+	// white-space: nowrap;
+
+	&::after {
+		// content: '';
+		position: absolute;
+		bottom: 0.5rem;
+		left: 0;
+		height: 0.2rem;
+		width: 100%;
+		background: $gold;
+		z-index: 0;
+	}
+}
+
 @mixin rohza {
 	font-family: 'Rozha One', serif;
 	letter-spacing: -0.3px;
 }
+
+@mixin surana {
+	font-family: 'Suranna', serif;
+}
+
+@mixin alice {
+	font-family: 'Alice', serif;
+}
+
